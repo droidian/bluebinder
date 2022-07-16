@@ -2,6 +2,7 @@
 Description=Simple proxy for using android binder based bluetooth through vhci.
 After=lxc@android.service
 Before=bluetooth.service
+ConditionPathExists=!/system-update
 
 [Service]
 Type=notify
