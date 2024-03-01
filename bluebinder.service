@@ -6,7 +6,7 @@ ConditionPathExists=!/system-update
 
 [Service]
 Type=notify
-ExecStartPre=/usr/bin/waitforservice init.svc.*bluetooth*
+ExecStartPre=/usr/bin/waitforservice '+(init.svc.*bt*|init.svc.*bluetooth*)'
 ExecStart=/usr/sbin/bluebinder
 ExecStartPost=/usr/bin/droid/bluebinder_post.sh
 Restart=always
