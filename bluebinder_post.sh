@@ -15,7 +15,7 @@ mkdir -p /var/lib/bluetooth
 # Getting address file from properties
 bt_addr_file=$(/usr/bin/getprop ro.bt.bdaddr_path)
 
-if [ "$bt_addr_file" == "" ]; then
+if [ "$bt_addr_file" = "" ]; then
     bt_addr_file=$(/usr/bin/getprop ro.vendor.bt.bdaddr_path)
 fi
 
